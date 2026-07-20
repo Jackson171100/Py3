@@ -8,7 +8,12 @@ class stack:
         return self.linklist.remove(self.linklist.length()-1)
 var1=stack()
 var1.push("a")
-var1.pop()
+
+print(var1.pop())
+var1.push("b")
+var1.push("c")
+
+print(var1.pop())
 
 
     
