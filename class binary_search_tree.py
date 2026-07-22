@@ -8,12 +8,13 @@ class binary_search_tree:
         self.root=None
     def append(self,value):
         if self.root==None:
-            self.root=Node
+            self.root=Node(None,None,value)
         else:
-            spcx=self.left
+            spcx=self.root
             #intc=self.right 
             while True:
-                if spcx==True:
-                    value-1
-                #if intc==True:
-                    #value+1
+                if value>spcx.value:
+                    if spcx.right:
+                        spcx=spcx.right
+                    else:
+                        spcx.right=Node(None,None,value)
