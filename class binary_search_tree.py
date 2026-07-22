@@ -1,1 +1,3 @@
-class binary_search_tree
+class Node:
+    def __init__(self):
+        pass
