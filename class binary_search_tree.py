@@ -33,4 +33,8 @@ class binary_search_tree:
                         return False
                     else:
                         mu=mu.left
-                        
+var7767=binary_search_tree()
+var7767.append(1)
+var7767.append(2)
+var7767.append(3)
+var7767.append(4)
