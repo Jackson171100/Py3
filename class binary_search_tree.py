@@ -18,3 +18,19 @@ class binary_search_tree:
                         spcx=spcx.right
                     else:
                         spcx.right=Node(None,None,value)
+    def search(self,value):                        
+            mu=self.root
+            while True:
+                if mu.value==value:
+                    return True
+                if value>mu.value:
+                    if mu.right==None:
+                        return False
+                    else:
+                        mu=mu.right
+                else:
+                    if mu.left==None:
+                        return False
+                    else:
+                        mu=mu.left
+                        
