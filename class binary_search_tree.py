@@ -18,6 +18,12 @@ class binary_search_tree:
                         spcx=spcx.right
                     else:
                         spcx.right=Node(None,None,value)
+                        break
+                else:
+                    if spcx.left:
+                        spcx=spcx.left
+                    else:
+                        spcx.left=Node(None,None,value)
     def search(self,value):                        
             mu=self.root
             while True:
@@ -38,3 +44,4 @@ var7767.append(1)
 var7767.append(2)
 var7767.append(3)
 var7767.append(4)
+print(var7767.search(5))
