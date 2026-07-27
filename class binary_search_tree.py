@@ -39,6 +39,26 @@ class binary_search_tree:
                         return False
                     else:
                         mu=mu.left
+    def romove(self,value):
+        mu=self.root
+        while True:
+            if mu.value==value:
+                break
+            if value>mu.value:
+                if mu.right==None:
+                    break
+                else:
+                    mu=mu.right
+            else:
+                if mu.left==None:
+                    break 
+                else:
+                    mu=mu.left  
+        varwhatever=mu.left
+       #varwhatever=mu.right
+        
+        
+       
 var7767=binary_search_tree()
 var7767.append(1)
 var7767.append(2)
