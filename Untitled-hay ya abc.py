@@ -49,17 +49,31 @@ for hay_ya in range(11111111111111111111111):
 
     start = time.time()
 
-    strong_hold_saba_more_beef=cubiomespi.get_stronghold_pos(gen,100)
-    print(strong_hold_saba_more_beef)
-    print(time.time()-start)
-    close=1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111112324455645467676
-    for pos in strong_hold_saba_more_beef:
-        posx=pos[0]
-        posz=pos[1]
+    # strong_hold_saba_more_beef=cubiomespi.get_stronghold_pos(gen,100)
+    # print(strong_hold_saba_more_beef)
+    # print(time.time()-start)
+    # close=1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111112324455645467676
+    # for pos in strong_hold_saba_more_beef:
+    #     posx=pos[0]
+    #     posz=pos[1]
 
-        distance=distance_between_points(spawnx,spawnz,posx,posz)
-        if distance<close:
-            close=distance
-    if close>(400):
+    #     distance=distance_between_points(spawnx,spawnz,posx,posz)
+    #     if distance<close:
+    #         close=distance
+    # if close>(400):
+    #     continue
+    # print()
+    # print(spawn)
+    var67676789895838=cubiomespi.find_closest_structure(gen,cubiomespi.Structure.Ancient_City,spawnx,spawnz,1)
+    if not var67676789895838:
         continue
+    posx=var67676789895838[0]
+    posz=var67676789895838[1]
+    distince=distance_between_points(posx,posz,spawnx,spawnz)
+
+
+
+
+
+    
     print(hay_ya)
