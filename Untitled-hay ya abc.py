@@ -38,7 +38,7 @@ def distance_between_points(x1,y1, x2, y2):
     return sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
 
 #print(nextInt(100,seed))
-for hay_ya in range(11111111111111111111111):
+for hay_ya in range(randint(0,1000000000),11111111111111111111111):
 
     gen=cubiomespi.Generator(cubiomespi.MCVersion.MC_1_20,hay_ya,cubiomespi.Dimension.DIM_OVERWORLD)
     spawn=cubiomespi.get_spawn_pos(gen)
@@ -70,10 +70,17 @@ for hay_ya in range(11111111111111111111111):
     posx=var67676789895838[0]
     posz=var67676789895838[1]
     distince=distance_between_points(posx,posz,spawnx,spawnz)
+    if distince>350:
+        continue
 
+    var67676789895838=cubiomespi.find_closest_structure(gen,cubiomespi.Structure.Mansion,spawnx,spawnz,1)
+    if not var67676789895838:
+        continue
+    posx=var67676789895838[0]
+    posz=var67676789895838[1]
+    distince=distance_between_points(posx,posz,spawnx,spawnz)
+    if distince>200:
+        continue
 
-
-
-
-    
+  
     print(hay_ya)
